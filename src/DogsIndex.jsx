@@ -31,7 +31,7 @@ export function DogsIndex(props) {
               <img src={dog.img} alt="Dog photo" />
             </figure>
             <div className="article-body">
-              <h2>Name: {dog.name}</h2>
+              <h2>{dog.name}</h2>
               <p>
                 Breed: {dog.breed}
                 <br />
