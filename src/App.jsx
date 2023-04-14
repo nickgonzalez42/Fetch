@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import dotenv from "dotenv";
 
 import Pagination from "./Pagination";
 import { Login } from "./Login";
@@ -26,7 +27,8 @@ export default function App() {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
   const [allBreeds, setAllBreeds] = useState([]);
 
-  const key = `${process.env.REACT_APP_API_KEY}`;
+  dotenv.config();
+  const key = process.env.REACT_APP_API_KEY;
   axios.defaults.headers.common["fetch-api-key"] = key;
 
   const handleLogin = (params) => {
